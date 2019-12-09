@@ -20,6 +20,7 @@ $this->title = 'Views';
             <th scope="col">Национальность</th>
             <th scope="col">Адрес прописки</th>
             <th scope="col">Номер документов</th>
+            <th scope="col">Просмотр</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@ $this->title = 'Views';
             <td><?php echo $model->nationality; ?></td>
             <td><?php echo $model->registration_address; ?></td>
             <td><?php echo $model->doc_numbers; ?></td>
+            <td style="text-align: center"><a href="/view/<?php echo $model->id; ?>"><i class="fa fa-eye"></i></a></td>
         </tr>
     <?php endforeach;?>
         </tbody>

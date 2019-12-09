@@ -50,6 +50,7 @@ $config = [
                 '' => 'site/index/',
                 'result' => 'site/result',
                 'views' => 'site/view',
+                'view/<id>' => 'site/update',
             ],
         ],
         /*

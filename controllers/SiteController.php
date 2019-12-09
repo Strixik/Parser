@@ -115,6 +115,20 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionUpdate($id)
+    {
+        $document = Document::findOne($id);
+        $model = new ResultForm($document);
+        if (Yii::$app->request->post()) {
+            if ($model->load(Yii::$app->request->post()) && $model->create()) {
+                Yii::$app->session->setFlash('Update');
+            }
+        }
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Login action.
      *
