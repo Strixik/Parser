@@ -31,7 +31,7 @@ $this->title = 'Views';
             <td><?php echo $model->surname; ?></td>
             <td><?php echo $model->name; ?></td>
             <td><?php echo $model->patronymic; ?></td>
-            <td><?php echo $model->date_of_birth; ?></td>
+            <td><?php $date =  new DateTime($model->date_of_birth); echo  $date->format('d-m-Y'); ?></td>
             <td><?php echo $model->nationality; ?></td>
             <td><?php echo $model->registration_address; ?></td>
             <td><?php echo $model->doc_numbers; ?></td>
