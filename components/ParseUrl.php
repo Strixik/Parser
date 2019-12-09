@@ -21,7 +21,7 @@ class ParseUrl extends \yii\base\BaseObject
      */
     protected function createPostRequestForCurl()
     {
-        return "do=salyk&number=" . $this->iinBin . "&code=" . $this->code . "&checksum=" . $this->checksum;
+        return "do=".$this->do."&number=" . $this->iinBin . "&code=" . $this->code . "&checksum=" . $this->checksum;
     }
 
     /**
