@@ -64,13 +64,13 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = new IinForm();
-        $html = '';
+        $array_values = '';
         if ($model->load(Yii::$app->request->post()) && $array_values = $model->save()) {
             $session = Yii::$app->session;
             $session->set('array_values', $array_values);
             return Yii::$app->response->redirect(['site/result']);
         }
-        if($html === false){
+        if($array_values === false){
             Yii::$app->session->setFlash('FormSubmitted');
         }
         return $this->render('index', [
